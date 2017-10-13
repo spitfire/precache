@@ -100,6 +100,7 @@ class PreCache(object):
         self.cache_config_path = '/Library/Server/Caching/Config/Config.plist'  # NOQA
         self.mesu_url = 'http://mesu.apple.com/assets'
         self.mobile_asset_path = 'com_apple_MobileAsset_SoftwareUpdate'
+        self.watchOSDeveloperBetaURL4_seed_path = 'watchOS4DeveloperSeed'
         self.mobile_update_xml = 'com_apple_MobileAsset_SoftwareUpdate.xml'
         self.osx_catalog_xml = 'https://swscan.apple.com/content/catalogs/others/index-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog'  # NOQA
 
@@ -113,6 +114,10 @@ class PreCache(object):
             'ios': '%s/%s/%s' % (self.mesu_url,
                                  self.mobile_asset_path,
                                  self.mobile_update_xml),
+            'watch-beta': '%s/%s/%s/%s' % (self.mesu_url,
+                                         self.watchOSDeveloperBetaURL4_seed_path,
+                                         self.mobile_asset_path,
+                                         self.mobile_update_xml),                     
         }
 
         self.mas_base_url = 'http://osxapps.itunes.apple.com'
