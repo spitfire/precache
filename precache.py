@@ -68,7 +68,7 @@ class PreCache(object):
     At the moment, there isn't a satisfactory way to avoid downloading and
     parsing the software updates feed, this adds additional time to processing.
     '''
-    def __init__(self, cache_server=None, cache_beta=True, dry_run=True,
+    def __init__(self, cache_server=None, cache_beta=False, dry_run=True,
                  log_level='info', ver=version):
 
         # Handle logging
